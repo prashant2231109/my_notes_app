@@ -1,4 +1,6 @@
-<h1> this is the templates</h1>
+<p style="font-size: 30px; font-weight: bold; text-align: center;margin-top: 40px;">
+    Note Taking App
+ </p>
 {%for note in notes%}
 {{note.title}}
 {{note.content}}
@@ -15,5 +17,6 @@
     <textarea id = "content", name="content"></textarea>
     <button type="submit">Create Note</button>
 </form>
+
 
 

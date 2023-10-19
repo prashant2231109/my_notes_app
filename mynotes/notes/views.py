@@ -21,3 +21,14 @@ def delete_view(request,id):
         note=get_object_or_404(Note,id=id)
         note.delete()
         return redirect('index')
+    
+    def edit_view(request, id):
+     note = get_object_or_404(Note, id=id)
+    if request.method == 'POST':
+        form = NoteForm(request.POST, instance=note)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = NoteForm(instance=note)
+    return render(request, 'notes/edit_view.html', { 'notes': note})
