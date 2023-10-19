@@ -1,4 +1,8 @@
 <style>
+    body{
+
+        background-color:#A9A9A9;
+    }
 
     button{
         background-color: #3498db;
@@ -29,7 +33,7 @@
     <p style="font-size: 30px; font-weight: bold; text-align: center;margin-top: 40px;">
     Note Taking App
  </p>
- <div class="align">
+
     {%for note in notes%}
 {{note.title}}
 {{note.content}}
@@ -49,7 +53,7 @@
     <textarea id = "content", name="content"></textarea>
     <button type="submit">Create Note</button>
 </form>
-</div>
+
 
 {%for note in notes%}
 {{note.title}}
@@ -64,3 +68,8 @@
 
 
 {% endfor%}
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+</form>
+

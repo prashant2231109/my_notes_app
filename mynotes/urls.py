@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+admin.site.site_header = "Welcome to Prashant django project"
+admin.site.site_title = "Welcome to Prashant django project"
+admin.site.index_title = " Noteapp project"
 
 
 

@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from .models import Note
 from django.http import HttpResponse
 from .forms import NoteForm
+# from .forms import NoteSearchForm
 # Create your views here.
 def index(request):
     notes=Note.objects.all()
@@ -33,3 +34,4 @@ def edit_view(request, id):
         form = NoteForm(instance=note)
     print("Rendering Template")
     return render(request, 'notes/edit_view.html', { 'notes': note})
+
