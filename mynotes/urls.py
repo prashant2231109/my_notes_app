@@ -25,6 +25,7 @@ admin.site.index_title = " Noteapp project"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('notes.urls'))
+    path('',include('notes.urls')),
+    path('api/', include('notes.api.urls'))
 
 ]
